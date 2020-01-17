@@ -46,32 +46,24 @@
             return constructor.newInstance(item);
         },
         NBTItemBuilder: (item, nbt) => {
-            server.broadcastMessage("Ree");
             const nbti = new module.exports.NBTItem(item);
-            server.broadcastMessage("Ree2");
             for(let i in nbt){
-                server.broadcastMessage("Ree3");
                 const obj = nbt[i];
                 if(typeof obj == "string"){
-                    server.broadcastMessage("Automatically using type STRING");
                     nbti.setString(i, obj);
                 } else if(typeof obj == "number"){
                     if(obj % 1 == 0){
-                        server.broadcastMessage("Automatically using type INTEGER");
                         nbti.setInteger(i, obj);
                     } else {
-                        server.broadcastMessage("Automatically using type DOUBLE");
                         nbti.setDouble(i, cast.asDouble(obj));
                     }
                 } else if(typeof obj == "boolean"){
-                    server.broadcastMessage("Automatically using type BOOLEAN");
                     nbti.setBoolean(i, obj);
                 } else if(typeof obj == "object"){
                     // NBTItemBuilder custom syntax
                     // Example: {test: {$build: {type: "string", value: "Hello!"}}}
                     // Has key 'test' and a value "Hello!" as a string
                     if(obj["$build"] != null){
-                        server.broadcastMessage("Current object is an NBTItemBuilder type builder");
                         const build = obj["$build"];
                         const type = build.type;
                         let value = build.value;
