@@ -65,7 +65,7 @@ Complete list of valid options for the `type` parameter:
 * itemStack
 
 # ItemUtils expansion
-If you have ItemUtils version **1.1** or newer, the NBT module will register a custom `nbt` option for the ItemBuilder constructor. This will allow you to declare custom NBT tags directly in your ItemBuilder constructor. The value expected to be passed to the `nbt` option is the same as the NBTItemBuilder constructor, and supports strict type declaration with $build. Let's have a look at some examples.
+If your server has ItemUtils version **1.1** or newer installed, the NBT module will register a custom `nbt` option for the ItemBuilder constructor. This will allow you to declare custom NBT tags directly in your ItemBuilder constructor. The value expected to be passed to the `nbt` option is the same as the NBTItemBuilder constructor, and supports strict type declaration with $build. Let's have a look at some examples.
 
 ```js
 // Less clean, but still functional method
