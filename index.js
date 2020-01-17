@@ -1,4 +1,5 @@
 (function(){
+    const File = java.io.File;
     const API = manager.loadExternal(new File("plugins/Drupi/scripts/modules/NBT/item-nbt-api-2.3.0-SNAPSHOT.jar"));
     const NBTCompound = API.loadClass("de.tr7zw.changeme.nbtapi.NBTCompound");
     const NBTCompoundList = API.loadClass("de.tr7zw.changeme.nbtapi.NBTCompoundList");
