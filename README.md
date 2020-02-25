@@ -1,7 +1,27 @@
 # NBT
 NBT module for use with Drupi. Download Drupi at https://stacket.net/drupi
 
-The current latest version of NBT is **0.1**, and this documentation will always be in reference to the latest version of NBT.
+The current latest version of NBT is **0.1.1**, and this documentation will always be in reference to the latest version of NBT.
+
+# Importing the NBT module
+
+How this module should be imported depends on how it is installed.
+
+## Installed natively (using /drupi install or similar):
+
+```js
+const NBT = require("NBT").init();
+```
+
+## Installed using Repos (https://github.com/SlickNicky10/Repos):
+
+```js
+const NBT = Repos.require(Repos.getRepoIdByURL("https://repo.slicknicky10.me", "NBT", true, "init"));
+```
+
+### Why is this required?
+
+Modules installed through Repos have a different base path than modules installed normally. This is what allows modules of the same name from multiple different repositories to be installed without any issues. However, for the NBT module to properly function, it needs access to the Repos ENV, which is what the `true` and `"init"` arguments are for. Otherwise, if you have installed NBT through Repos, it will fail to load.
 
 # Using the NBTItem constructor
 The most basic method of using the NBT module to manipulate item NBT is by creating an NBTItem. Let's create a test item where we will set `test` to `"Hello!"`.
