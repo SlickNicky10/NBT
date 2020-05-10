@@ -16,7 +16,7 @@ const NBT = require("NBT").init();
 ## Installed using Repos (https://github.com/SlickNicky10/Repos):
 
 ```js
-const NBT = Repos.require(Repos.getRepoIdByURL("https://repo.slicknicky10.me", "NBT", true, "init"));
+const NBT = Repos.require(Repos.getRepoIdByURL("https://repo.sn10hub.net", "NBT", true, "init"));
 ```
 
 ### Why is this required?
